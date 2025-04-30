@@ -1,0 +1,436 @@
+{
+  "v": 6,
+  "name": "Language-learning-platform",
+  "folders": [
+    {
+      "v": 6,
+      "name": "User",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Register",
+          "method": "POST",
+          "endpoint": "https://<<baseUrl>>/users/register",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"can8888\",\n  \"password\": \"1222223\",\n  \"role\": \"user\" \n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Login",
+          "method": "POST",
+          "endpoint": "https://<<baseUrl>>/users/login",
+          "params": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"123123\",\n  \"password\": \"123123\",\n  \"role\": \"admin\" \n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get all",
+          "method": "GET",
+          "endpoint": "https://<<baseUrl>>/users",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get by ID",
+          "method": "GET",
+          "endpoint": "https://<<baseUrl>>/users/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "680ee1040d10dfeda8934ed6",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Update",
+          "method": "PUT",
+          "endpoint": "https://<<baseUrl>>/users/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"qhabaskcbs888w\"\n}"
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "67ea9fbf228c9b90865945df",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Delete",
+          "method": "DELETE",
+          "endpoint": "https://<<baseUrl>>/users/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "680eec4d0d10dfeda8934f57",
+              "active": true
+            }
+          ],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDQ5MmNiZmFhZDk2ODAxYWYxNjVhZiIsImlhdCI6MTc0NTgwNjQyMSwiZXhwIjoxNzQ2NDExMjIxfQ.yacrFkAN5-0ng_HUWp5AFtRpGiY3P0K5ALGhclo5g-I",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m8xu2i21_ae7aaf3b-222b-4ebd-9d93-39392788b5f7"
+    },
+    {
+      "v": 6,
+      "name": "Course",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Create",
+          "method": "POST",
+          "endpoint": "https://<<baseUrl>>/courses/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n    \"title\": \"Advanced Spanish Grammar\",\n    \"language\": \"Spanish\",\n    \"level\": \"advanced\"\n  }"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get all",
+          "method": "GET",
+          "endpoint": "https://<<baseUrl>>/courses/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get By ID",
+          "method": "GET",
+          "endpoint": "https://<<baseUrl>>/courses/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "681031663a6e0dfc25ce26cc",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Update",
+          "method": "PUT",
+          "endpoint": "https://<<baseUrl>>/courses/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"title\": \"99999\"\n\n}"
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "681031663a6e0dfc25ce26cc",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Delete",
+          "method": "DELETE",
+          "endpoint": "https://<<baseUrl>>/courses/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "681031663a6e0dfc25ce26cc",
+              "active": true
+            }
+          ],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m8y1nwhu_9dc5bbf1-327a-4b8b-85df-5db1aae2f047"
+    },
+    {
+      "v": 6,
+      "name": "Vocabulary",
+      "folders": [],
+      "requests": [
+        {
+          "v": "11",
+          "name": "Create",
+          "method": "POST",
+          "endpoint": "https://<<baseUrl>>/vocabularies/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"word\": \"bounce\",\n  \"translation\": \"蹦\",\n  \"language\": \"English\",\n  \"course\": \"67e902dc75d60305bf30058c\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get all",
+          "method": "GET",
+          "endpoint": "https://<<baseUrl>>/vocabularies/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Get By ID",
+          "method": "GET",
+          "endpoint": "https://<<baseUrl>>/vocabularies/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "67e901d675d60305bf300589",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Update",
+          "method": "PUT",
+          "endpoint": "https://<<baseUrl>>/vocabularies/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"language\": \"English\",\n  \"difficulty\": \"medium\"\n}"
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "67e901d675d60305bf300589",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "11",
+          "name": "Delete",
+          "method": "DELETE",
+          "endpoint": "https://<<baseUrl>>/vocabularies/<<id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "id",
+              "value": "6810349b3a6e0dfc25ce26fd",
+              "active": true
+            }
+          ],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_m8y2cbah_b0fb0e89-0eb7-4eb6-a502-2afcfccdf9d5"
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "bearer",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDQ5MmNiZmFhZDk2ODAxYWYxNjVhZiIsImlhdCI6MTc0NTgwNjI4MSwiZXhwIjoxNzQ2NDExMDgxfQ.HAW8OSMZMpJlNOUx6aObP4Am5tRHmBkZYuAKB2ywBgg",
+    "authActive": true
+  },
+  "headers": [],
+  "_ref_id": "coll_m8wq7kx5_a5a12c9b-574b-4026-a5a9-05b796a3d853"
+}

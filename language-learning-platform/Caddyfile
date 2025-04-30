@@ -1,0 +1,15 @@
+n11789450.ifn666.com {
+  
+    handle /assessment02/api/* {
+        uri strip_prefix /assessment02
+        reverse_proxy localhost:5002
+    }
+
+    handle /language-learning/* {
+        root * /var/www/html
+        try_files {path} /language-learning/index.html 
+        file_server
+    }
+
+    encode gzip
+}

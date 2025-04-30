@@ -1,0 +1,20 @@
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+  }
+  
+  [data-mantine-stop-propagation]:focus-visible,
+  .mantine-Button-root:focus-visible,
+  .mantine-TextInput-input:focus-visible,
+  .mantine-PasswordInput-input:focus-visible,
+  .mantine-Select-input:focus-visible {
+    outline: 2px solid var(--mantine-color-blue-6) !important;
+    outline-offset: 2px !important;
+  }
